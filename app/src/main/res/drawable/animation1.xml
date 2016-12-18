@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--   
+    根標籤為animation-list，其中oneshot代表著是否隻展示一遍，設置為false會不停的循環播放動畫  
+    根標籤下，通過item標籤對動畫中的每一個圖片進行聲明  
+    android:duration 表示展示所用的該圖片的時間長度  
+ -->
+<animation-list
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false"
+    >
+    <item android:drawable="@drawable/scissors" android:duration="250"></item>
+    <item android:drawable="@drawable/rock" android:duration="250"></item>
+    <item android:drawable="@drawable/paper" android:duration="250"></item>
+
+</animation-list> 
