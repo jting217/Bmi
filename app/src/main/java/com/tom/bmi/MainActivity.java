@@ -15,6 +15,8 @@ public class MainActivity extends AppCompatActivity {
     private AnimationDrawable animationDrawable;
     private ImageView mImgViewScissors, mImgViewRock, mImgViewPaper, mImgViewPlayer;
     private TextView mTxtViewResult;
+    TextView textViewInfo;
+    GifView gifView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +38,18 @@ public class MainActivity extends AppCompatActivity {
         mImgViewScissors.setOnClickListener(imgViewPlayOnClick);
         mImgViewRock.setOnClickListener(imgViewPlayOnClick);
         mImgViewPaper.setOnClickListener(imgViewPlayOnClick);
+
+        gifView = (GifView)findViewById(R.id.gifview);
+        textViewInfo = (TextView)findViewById(R.id.textinfo);
+
+        String stringInfo = "";
+        stringInfo += "Duration: " + gifView.getMovieDuration() + "\n";
+        stringInfo += "W x H: "
+                + gifView.getMovieWidth() + " x "
+                + gifView.getMovieHeight() + "\n";
+
+        textViewInfo.setText(stringInfo);
+
     }
 
     private View.OnClickListener imgViewPlayOnClick = new View.OnClickListener() {
